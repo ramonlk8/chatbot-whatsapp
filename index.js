@@ -3,6 +3,16 @@
 const qrcode = require('qrcode-terminal');
 const { Client, Buttons, List, MessageMedia } = require('whatsapp-web.js'); // Mudança Buttons
 const client = new Client();
+const express = require('express')
+const app = express()
+const port = 10000;
+app.get('/health', (req, res) => {
+  res.send('Servidor está On')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 // serviço de leitura do qr code
 client.on('qr', qr => {
     console.log(qr);
