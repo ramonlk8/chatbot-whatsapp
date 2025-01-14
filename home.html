@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bentido Doce Bot</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffccf2, #cce7ff);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff99cc;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+        }
+
+        .button-container {
+            margin-top: 50px;
+        }
+
+        button {
+            background-color: #ff99cc;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #cc6699;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .loading-container {
+            display: none;
+            /* Escondido inicialmente */
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ccc;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-text {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .content {
+            display: block;
+            /* Escondido até ser carregado */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Controle Chatbot BenditoDoce</h1>
+    </header>
+
+    <!-- Loading -->
+    <div class="loading-container" id="loading">
+        <div class="spinner"></div>
+        <p class="loading-text">Carregando...</p>
+    </div>
+
+
+    <div class="button-container" id="container">
+        <button onclick="iniciarBot()">Iniciar Bot e Gerar Qr Code</button>
+        <button onclick="window.location.href='/reseta'">Resetar</button>
+    </div>
+
+    <script>
+        function iniciarBot() {
+            document.getElementById('loading').style.display = 'flex';
+            document.getElementById('container').style.display = 'none';
+            window.location.href='/inicia';
+        }  // Esconde o loading
+        
+
+        // Mostra o conteúdo
+        
+    </script>
+
+    <footer>
+        <p>Criado por Ramon Muniz &#127874;</p>
+    </footer>
+</body>
+
+</html>
