@@ -44,7 +44,7 @@ client.on('message', async msg => {
         await delay(3000); //Delay de 3000 milisegundos mais conhecido como 3 segundos
         await chat.sendStateTyping(); // Simulando Digitação
         await delay(3000);
-        const imagePaths = ['./img/kits/minivulcao.jpg', './img/kits/IMG_2427.jpg', './img/kits/IMG_2428.jpg', './img/kits/IMG_2429.jpg']; 
+        const imagePaths = ['./img/kits/minivulcao.jpg', './img/kits/IMG_2427.JPG', './img/kits/IMG_2428.JPG', './img/kits/IMG_2429.JPG']; 
         var numeroKits = 0;
         for (const path of imagePaths) {
             numeroKits = numeroKits + 1;
