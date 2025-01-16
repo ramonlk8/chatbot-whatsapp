@@ -148,7 +148,7 @@ client.on('message', async msg => {
     var contact = await msg.getContact(); //Pegando o contato
     var name = contact.pushname; //Pegando o nome do contato
 
-    if (msg.body.match(/(menu|Menu|dia|tarde|noite|olá|Olá|Oi|entregam|podemos)/i) && msg.from.endsWith('@c.us')) {
+    if (msg.body.match(/(menu|Menu|dia|tarde|noite|olá|Olá|Oi|entregam|podemos)/) && msg.from.endsWith('@c.us')) {
 
         const chat = await msg.getChat();
         await delay(3000); //delay de 3 segundos
